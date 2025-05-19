@@ -15,6 +15,21 @@
     <link rel="stylesheet" href="vender/swiper-js/swiper-bundle.min.css" />
     <!-- Custom Css -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-HWNCS54EPF"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-HWNCS54EPF");
+    </script>
   </head>
   <body>
     <!-- navbar -->
@@ -1197,7 +1212,7 @@
         <div class="swiper-pagination"></div>
       </div>
     </div>
-    <!-- sort by product -->
+    <!-- Shop by product -->
     <div class="py-5">
       <div class="container">
         <div class="row align-items-center justify-content-between g-4 mb-4">
@@ -1345,143 +1360,12 @@
         </div>
       </div>
     </div>
-    <!-- Shop by collections -->
+    <!-- What's In Stock -->
     <div class="py-5">
       <div class="container">
         <div class="row align-items-center justify-content-between g-4 mb-4">
           <div class="col-auto">
-            <h4 class="fw-bold mb-0">Shop By Collections</h4>
-          </div>
-          <div class="col-auto">
-            <a href="collections.html" class="link-dark"
-              >SEE ALL <i class="ri-arrow-right-line ms-1"></i>
-            </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="swiper shop-by-collections-slider">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="card bg-light border-0 rounded-0">
-                    <img
-                      src="img/collections/collection-1.jpg"
-                      class="card-img-top rounded-0"
-                      alt="collections"
-                    />
-                    <div class="card-footer bg-transparent border-0 p-4">
-                      <div
-                        class="d-flex align-items-center justify-content-between mb-1"
-                      >
-                        <h6 class="mb-0">The Camouflage Collection</h6>
-                        <a
-                          href="collection-single.html"
-                          class="link-dark stretched-link"
-                        >
-                          <i class="ri-arrow-right-line ri-lg"></i>
-                        </a>
-                      </div>
-                      <p class="text-secondary-emphasis mb-0">
-                        There is a widely-accepted belief camouflage
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card bg-light border-0 rounded-0">
-                    <img
-                      src="img/collections/collection-2.jpg"
-                      class="card-img-top rounded-0"
-                      alt="collections"
-                    />
-                    <div class="card-footer bg-transparent border-0 p-4">
-                      <div
-                        class="d-flex align-items-center justify-content-between mb-1"
-                      >
-                        <h6 class="mb-0">Shia LaBeouf: The Source</h6>
-                        <a
-                          href="collection-single.html"
-                          class="link-dark stretched-link"
-                        >
-                          <i class="ri-arrow-right-line ri-lg"></i>
-                        </a>
-                      </div>
-                      <p class="text-secondary-emphasis mb-0">
-                        There is a widely-accepted belief camouflage
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card bg-light border-0 rounded-0">
-                    <img
-                      src="img/collections/collection-3.jpg"
-                      class="card-img-top rounded-0"
-                      alt="collections"
-                    />
-                    <div class="card-footer bg-transparent border-0 p-4">
-                      <div
-                        class="d-flex align-items-center justify-content-between mb-1"
-                      >
-                        <h6 class="mb-0">
-                          Speedy Shippers: Vintage Levi's Denim
-                        </h6>
-                        <a
-                          href="collection-single.html"
-                          class="link-dark stretched-link"
-                        >
-                          <i class="ri-arrow-right-line ri-lg"></i>
-                        </a>
-                      </div>
-                      <p class="text-secondary-emphasis mb-0">
-                        There is a widely-accepted belief camouflage
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card bg-light border-0 rounded-0">
-                    <img
-                      src="img/collections/collection-4.jpg"
-                      class="card-img-top rounded-0"
-                      alt="collections"
-                    />
-                    <div class="card-footer bg-transparent border-0 p-4">
-                      <div
-                        class="d-flex align-items-center justify-content-between mb-1"
-                      >
-                        <h6 class="mb-0">Addidas Top Collections</h6>
-                        <a
-                          href="collection-single.html"
-                          class="link-dark stretched-link"
-                        >
-                          <i class="ri-arrow-right-line ri-lg"></i>
-                        </a>
-                      </div>
-                      <p class="text-secondary-emphasis mb-0">
-                        There is a widely-accepted belief camouflage
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-button-prev">
-                <i class="ri-arrow-left-circle-fill ri-3x text-dark"></i>
-              </div>
-              <div class="swiper-button-next">
-                <i class="ri-arrow-right-circle-fill ri-3x text-dark"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- What's new -->
-    <div class="py-5">
-      <div class="container">
-        <div class="row align-items-center justify-content-between g-4 mb-4">
-          <div class="col-auto">
-            <h4 class="fw-bold mb-0">What's New</h4>
+            <h4 class="fw-bold mb-0">In Stock Now</h4>
           </div>
           <div class="col-auto">
             <a href="#" class="link-dark"
@@ -1897,6 +1781,137 @@
                       </a>
                     </div>
                     <a href="product-detail.html" class="stretched-link"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-prev">
+                <i class="ri-arrow-left-circle-fill ri-3x text-dark"></i>
+              </div>
+              <div class="swiper-button-next">
+                <i class="ri-arrow-right-circle-fill ri-3x text-dark"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Shop by collections -->
+    <div class="py-5">
+      <div class="container">
+        <div class="row align-items-center justify-content-between g-4 mb-4">
+          <div class="col-auto">
+            <h4 class="fw-bold mb-0">Shop By Collections</h4>
+          </div>
+          <div class="col-auto">
+            <a href="collections.html" class="link-dark"
+              >SEE ALL <i class="ri-arrow-right-line ms-1"></i>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="swiper shop-by-collections-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="card bg-light border-0 rounded-0">
+                    <img
+                      src="img/collections/collection-1.jpg"
+                      class="card-img-top rounded-0"
+                      alt="collections"
+                    />
+                    <div class="card-footer bg-transparent border-0 p-4">
+                      <div
+                        class="d-flex align-items-center justify-content-between mb-1"
+                      >
+                        <h6 class="mb-0">The Camouflage Collection</h6>
+                        <a
+                          href="collection-single.html"
+                          class="link-dark stretched-link"
+                        >
+                          <i class="ri-arrow-right-line ri-lg"></i>
+                        </a>
+                      </div>
+                      <p class="text-secondary-emphasis mb-0">
+                        There is a widely-accepted belief camouflage
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card bg-light border-0 rounded-0">
+                    <img
+                      src="img/collections/collection-2.jpg"
+                      class="card-img-top rounded-0"
+                      alt="collections"
+                    />
+                    <div class="card-footer bg-transparent border-0 p-4">
+                      <div
+                        class="d-flex align-items-center justify-content-between mb-1"
+                      >
+                        <h6 class="mb-0">Shia LaBeouf: The Source</h6>
+                        <a
+                          href="collection-single.html"
+                          class="link-dark stretched-link"
+                        >
+                          <i class="ri-arrow-right-line ri-lg"></i>
+                        </a>
+                      </div>
+                      <p class="text-secondary-emphasis mb-0">
+                        There is a widely-accepted belief camouflage
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card bg-light border-0 rounded-0">
+                    <img
+                      src="img/collections/collection-3.jpg"
+                      class="card-img-top rounded-0"
+                      alt="collections"
+                    />
+                    <div class="card-footer bg-transparent border-0 p-4">
+                      <div
+                        class="d-flex align-items-center justify-content-between mb-1"
+                      >
+                        <h6 class="mb-0">
+                          Speedy Shippers: Vintage Levi's Denim
+                        </h6>
+                        <a
+                          href="collection-single.html"
+                          class="link-dark stretched-link"
+                        >
+                          <i class="ri-arrow-right-line ri-lg"></i>
+                        </a>
+                      </div>
+                      <p class="text-secondary-emphasis mb-0">
+                        There is a widely-accepted belief camouflage
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card bg-light border-0 rounded-0">
+                    <img
+                      src="img/collections/collection-4.jpg"
+                      class="card-img-top rounded-0"
+                      alt="collections"
+                    />
+                    <div class="card-footer bg-transparent border-0 p-4">
+                      <div
+                        class="d-flex align-items-center justify-content-between mb-1"
+                      >
+                        <h6 class="mb-0">Addidas Top Collections</h6>
+                        <a
+                          href="collection-single.html"
+                          class="link-dark stretched-link"
+                        >
+                          <i class="ri-arrow-right-line ri-lg"></i>
+                        </a>
+                      </div>
+                      <p class="text-secondary-emphasis mb-0">
+                        There is a widely-accepted belief camouflage
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2791,7 +2806,7 @@
                 class="footer-brand d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none"
               >
                 <img
-                  src="img/logo.svg"
+                  src="img/logo2.svg"
                   class="img-fluid w-25"
                   alt="iamosahan"
                 />
