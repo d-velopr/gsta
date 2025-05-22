@@ -299,7 +299,7 @@ a {
 
 /* homepage */
 .hero-slider-one {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/slider/slider-1.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/slider/slider-1.gif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
