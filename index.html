@@ -148,54 +148,6 @@
               >
             </li>
 
-            <!-- Men Dropdown -->
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link text-uppercase dropdown-toggle"
-                href="#"
-                id="menDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Men
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="menDropdown">
-                <li>
-                  <a class="dropdown-item" href="shirts.html">Shirts</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="hoodies.html">Hoodies</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="zip-ups.html"
-                    >Zip-Up Hoodies</a
-                  >
-                </li>
-              </ul>
-            </li>
-
-            <!-- Accesories Dropdown -->
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link text-uppercase dropdown-toggle"
-                href="#"
-                id="womenDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Accessories
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="womenDropdown">
-                <li><a class="dropdown-item" href="hats.html">Hats</a></li>
-                <li>
-                  <a class="dropdown-item" href="stickers.html">Stickers</a>
-                </li>
-                <li><a class="dropdown-item" href="extra.html">Extra</a></li>
-              </ul>
-            </li>
-
             <!-- Shop -->
             <li class="nav-item">
               <a
@@ -1250,6 +1202,57 @@
         </div>
       </div>
     </div>
+    <!-- Subscribe Section -->
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <h4 class="fw-bold mb-3">Subscribe To Our Newsletter</h4>
+          <p class="mb-4">
+            Stay updated with our latest drops and announcements.
+          </p>
+          <form id="subscribe-form">
+            <div class="input-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                placeholder="Enter your email"
+                required
+              />
+              <button class="btn btn-dark" type="submit">Subscribe</button>
+            </div>
+            <div id="form-status" class="mt-2 text-success fw-semibold"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      const form = document.getElementById("subscribe-form");
+      const status = document.getElementById("form-status");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const email = document.getElementById("email").value;
+
+        fetch(
+          "https://script.google.com/macros/s/AKfycbwczcPoYYPDXfXkhxxdA-UyVoxs4m_-rAq0m5gCRvtu7xVwXCT_d05CtHYcCbEUwqM3/exec",
+          {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email }),
+          }
+        );
+
+        status.innerText = "Thanks for subscribing!";
+        form.reset();
+      });
+    </script>
+    <!-- End Subscribe Section -->
+    <br />
     <div class="py-3 bg-white footer-copyright">
       <div class="container">
         <div class="row align-items-center">
