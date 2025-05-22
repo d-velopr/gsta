@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="img/logo3.png" />
-    <title>GSTA | Home</title>
+    <title>GSTA | Shop</title>
     <meta name="description" content="dvelupmint" />
     <meta name="keywords" content="dvelupmint" />
     <!-- Bootstrap Css -->
@@ -148,7 +148,7 @@
               >
             </li>
 
-            <!-- Shop -->
+            <!-- Pre-Orders -->
             <li class="nav-item">
               <a
                 class="nav-link text-uppercase"
@@ -157,7 +157,7 @@
                 role="button"
                 aria-expanded="false"
               >
-                Shop
+                Pre-Orders
               </a>
             </li>
 
@@ -1036,6 +1036,59 @@
         </div>
       </div>
     </div>
+
+    <!-- Subscribe Section -->
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <h4 class="fw-bold mb-3">Subscribe To Our Newsletter</h4>
+          <p class="mb-4">
+            Stay updated with our latest drops and announcements.
+          </p>
+          <form id="subscribe-form">
+            <div class="input-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                placeholder="Enter your email"
+                required
+              />
+              <button class="btn btn-dark" type="submit">Subscribe</button>
+            </div>
+            <div id="form-status" class="mt-2 text-success fw-semibold"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      const form = document.getElementById("subscribe-form");
+      const status = document.getElementById("form-status");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const email = document.getElementById("email").value;
+
+        fetch(
+          "https://script.google.com/macros/s/AKfycbwczcPoYYPDXfXkhxxdA-UyVoxs4m_-rAq0m5gCRvtu7xVwXCT_d05CtHYcCbEUwqM3/exec",
+          {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email }),
+          }
+        );
+
+        status.innerText = "Thanks for subscribing!";
+        form.reset();
+      });
+    </script>
+    <br />
+
+    <!-- Desktop Only Footer -->
     <div class="py-5 footer bg-body-tertiary">
       <div>
         <div class="container py-3">
@@ -1202,57 +1255,7 @@
         </div>
       </div>
     </div>
-    <!-- Subscribe Section -->
-    <div class="container mt-5">
-      <div class="row justify-content-center">
-        <div class="col-lg-6 text-center">
-          <h4 class="fw-bold mb-3">Subscribe To Our Newsletter</h4>
-          <p class="mb-4">
-            Stay updated with our latest drops and announcements.
-          </p>
-          <form id="subscribe-form">
-            <div class="input-group">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                class="form-control"
-                placeholder="Enter your email"
-                required
-              />
-              <button class="btn btn-dark" type="submit">Subscribe</button>
-            </div>
-            <div id="form-status" class="mt-2 text-success fw-semibold"></div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <script>
-      const form = document.getElementById("subscribe-form");
-      const status = document.getElementById("form-status");
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        const email = document.getElementById("email").value;
-
-        fetch(
-          "https://script.google.com/macros/s/AKfycbwczcPoYYPDXfXkhxxdA-UyVoxs4m_-rAq0m5gCRvtu7xVwXCT_d05CtHYcCbEUwqM3/exec",
-          {
-            method: "POST",
-            mode: "no-cors",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ email }),
-          }
-        );
-
-        status.innerText = "Thanks for subscribing!";
-        form.reset();
-      });
-    </script>
-    <!-- End Subscribe Section -->
-    <br />
+    <!-- Bottom Footer -->
     <div class="py-3 bg-white footer-copyright">
       <div class="container">
         <div class="row align-items-center">
