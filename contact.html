@@ -193,7 +193,7 @@
           </a>
           <a
             target="_blank"
-            href="#"
+            href="https://github.com/d-velopr"
             class="btn social-btn btn-sm text-decoration-none"
           >
             <i class="ri-github-fill fs-5"></i>
@@ -234,86 +234,67 @@
               <form
                 class="form-floating-space"
                 id="contactForm"
-                data-sb-form-api-token="API_TOKEN"
+                autocomplete="off"
               >
+                <!-- Full Name -->
                 <div class="form-floating mb-3 rounded-0">
                   <input
                     class="form-control rounded-0"
                     id="name"
                     type="text"
                     placeholder="Enter your name..."
-                    data-sb-validations="required"
+                    required
                   />
                   <label for="name">Full name</label>
-                  <div
-                    class="invalid-feedback"
-                    data-sb-feedback="name:required"
-                  >
-                    A name is required.
-                  </div>
                 </div>
+                <!-- Email Address -->
                 <div class="form-floating mb-3 rounded-0">
                   <input
                     class="form-control rounded-0"
                     id="email"
                     type="email"
                     placeholder="name@example.com"
-                    data-sb-validations="required,email"
+                    required
                   />
                   <label for="email">Email address</label>
-                  <div
-                    class="invalid-feedback"
-                    data-sb-feedback="email:required"
-                  >
-                    An email is required.
-                  </div>
-                  <div class="invalid-feedback" data-sb-feedback="email:email">
-                    Email is not valid.
-                  </div>
                 </div>
+                <!-- Phone Number -->
                 <div class="form-floating mb-3 rounded-0">
                   <input
                     class="form-control rounded-0"
                     id="phone"
                     type="tel"
                     placeholder="(123) 456-7890"
-                    data-sb-validations="required"
+                    required
                   />
                   <label for="phone">Phone number</label>
-                  <div
-                    class="invalid-feedback"
-                    data-sb-feedback="phone:required"
-                  >
-                    A phone number is required.
-                  </div>
                 </div>
+                <!-- Message -->
                 <div class="form-floating mb-3 rounded-0">
                   <textarea
                     class="form-control rounded-0"
                     id="message"
                     placeholder="Enter your message here..."
                     style="height: 10rem"
-                    data-sb-validations="required"
+                    required
                   ></textarea>
                   <label for="message">Message</label>
-                  <div
-                    class="invalid-feedback"
-                    data-sb-feedback="message:required"
-                  >
-                    A message is required.
-                  </div>
                 </div>
-                <div class="d-none" id="submitSuccessMessage">
-                  <div class="text-center mb-3">
-                    <div class="fw-bolder">Form submission successful!</div>
-                    To activate this form, sign up at
-                  </div>
+
+                <div
+                  class="d-none text-success text-center mb-3"
+                  id="submitSuccessMessage"
+                >
+                  <div class="fw-bolder">Form submission successful!</div>
                 </div>
-                <div class="d-none" id="submitErrorMessage">
-                  <div class="text-center text-danger mb-3">
-                    Error sending message!
-                  </div>
+
+                <div
+                  class="d-none text-danger text-center mb-3"
+                  id="submitErrorMessage"
+                >
+                  Error sending message!
                 </div>
+
                 <div class="d-grid">
                   <button
                     class="btn btn-dark fw-bold fs-7 rounded-0 shadow-none border-0 px-5 py-3 text-uppercase w-100"
@@ -336,7 +317,7 @@
             </div>
             <div class="h5 mb-2 fw-bold text-black">Chat with us</div>
             <p class="text-muted mb-0">
-              Chat live with one of our support specialists.
+              Submit a message and we will reach back out to you.
             </p>
           </div>
           <div class="col">
@@ -347,7 +328,7 @@
             </div>
             <div class="h5 fw-bold text-black">Ask the community</div>
             <p class="text-muted mb-0">
-              Explore our community forums and communicate with other users.
+              Explore our community and communicate with other genuine GSTA's.
             </p>
           </div>
           <div class="col">
@@ -358,7 +339,8 @@
             </div>
             <div class="h5 fw-bold text-black">Support center</div>
             <p class="text-muted mb-0">
-              Browse FAQ's and support articles to find solutions.
+              Browse FAQ's while you're waiting for a response to find
+              solutions.
             </p>
           </div>
           <div class="col">
@@ -369,7 +351,7 @@
             </div>
             <div class="h5 fw-bold text-black">Call us</div>
             <p class="text-muted mb-0">
-              Call us during normal business hours at (555) 892-9403.
+              Call us during normal business hours at (626) 244-1256.
             </p>
           </div>
         </div>
@@ -601,7 +583,7 @@
             </a>
             <a
               target="_blank"
-              href="#"
+              href="https://github.com/d-velopr"
               class="btn social-btn btn-sm text-decoration-none"
             >
               <i class="ri-github-fill fs-5"></i>
@@ -610,6 +592,36 @@
         </div>
       </div>
     </div>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxOylElBqoMgmLsSE21DSKasfChf4V3991gY5U3j6xhY6fLAT5crtk5kJMORV_U3so4/exec";
+      const form = document.getElementById("contactForm");
+      const successMsg = document.getElementById("submitSuccessMessage");
+      const errorMsg = document.getElementById("submitErrorMessage");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        successMsg.classList.add("d-none");
+        errorMsg.classList.add("d-none");
+
+        const data = new FormData(form);
+
+        fetch(scriptURL, { method: "POST", body: data })
+          .then((response) => {
+            if (response.ok) {
+              form.reset();
+              successMsg.classList.remove("d-none");
+            } else {
+              throw new Error("Network response was not ok");
+            }
+          })
+          .catch((error) => {
+            console.error("Error!", error.message);
+            errorMsg.classList.remove("d-none");
+          });
+      });
+    </script>
+
     <!-- Bootstrap Bundle Js -->
     <script src="vender/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Swiper Slider Js -->
